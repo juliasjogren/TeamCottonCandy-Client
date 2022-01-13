@@ -2,9 +2,9 @@ import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import { routeNames } from "./router.constants";
-import Home from "../routes/home";
-import GameHistory from "../routes/GameHistory";
-import AboutUs from "../routes/AboutUs";
+import Home from "../routes/Home/home";
+import GameHistory from "../routes/GameHistory/gameHistory";
+import AboutUs from "../routes/AboutUs/aboutUs";
 
 const Router = () => {
 	return (

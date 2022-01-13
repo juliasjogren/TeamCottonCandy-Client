@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "../../Layout/Header";
+import Header from "../../Layout/Header/header";
 
 const GameHistory = () => {
 	const [lans, setLans] = useState([]);
