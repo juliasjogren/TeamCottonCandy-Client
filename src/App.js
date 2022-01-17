@@ -1,5 +1,5 @@
 import React from "react";
-import Router from "./router";
+import Router from "./router/router";
 import styled from "styled-components";
 
 const App = () => {
