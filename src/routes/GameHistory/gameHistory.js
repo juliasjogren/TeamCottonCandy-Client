@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import CreateLan from "../../Layout/CreateLan/createLan";
 import Header from "../../Layout/Header/header";
+import Lan from "../../Layout/Lan/lan";
 
 const GameHistory = () => {
 	const [lans, setLans] = useState([]);
@@ -11,23 +13,15 @@ const GameHistory = () => {
 			.then(({ lans }) => {
 				setLans(lans);
 			});
-	}, []);
+	});
 
 	return (
 		<Wrap>
 			<Header />
 			<h2>GameHistory</h2>
+			<CreateLan></CreateLan>
 			{lans.map((lan) => (
-				<Lan key={lan.date}>
-					{lan.games.map((game) => (
-						<Game key={game.id}>
-							<h1>{game.result}</h1>
-							{game.players.map((player) => (
-								<Player key={player.player}>{player.hero}</Player>
-							))}
-						</Game>
-					))}
-				</Lan>
+				<StyledLan data={lan} key={lan.date} />
 			))}
 		</Wrap>
 	);
@@ -36,6 +30,6 @@ const GameHistory = () => {
 export default GameHistory;
 
 const Wrap = styled.div``;
-const Lan = styled.div``;
+const StyledLan = styled(Lan)``;
 const Game = styled.div``;
 const Player = styled.div``;
