@@ -2,6 +2,8 @@ import React from "react";
 import Router from "./router/router";
 import styled from "styled-components";
 
+console.log(1);
+
 const App = () => {
 	return (
 		<Wrap>
