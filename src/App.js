@@ -2,7 +2,7 @@ import React from "react";
 import Router from "./router/router";
 import styled from "styled-components";
 
-console.log(2);
+console.log(1);
 
 const App = () => {
 	return (
